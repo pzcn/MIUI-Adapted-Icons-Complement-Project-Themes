@@ -16,7 +16,7 @@ for dir in ${DIR};do
 		cd ..
 	fi
 done
-cd ../..
+cd ../../..
 rm -rf ./explore/explore1/layer_animating_icons/config.xml
 mv explore icons
 XZ_OPT=-9 tar cJf explore.tar.xz icons
@@ -39,7 +39,7 @@ for dir in ${DIR};do
 		cd ..
 	fi
 done
-cd ../..
+cd ../../..
 rm -rf ./lrone/lrone1/layer_animating_icons/config.xml
 mv lrone icons
 XZ_OPT=-9 tar cJf lrone.tar.xz icons
