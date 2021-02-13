@@ -36,7 +36,7 @@ jobs:
           author_name: pzcn
           author_email: pdzzzcn@gmail.com
           message: 'Update Themes'
-          add: "['*.tar.xz', '*.config']"
+          add: "['*.tar.xz', 'config/*']"
 
       - name: Bump version and push tag
         id: tag_version
