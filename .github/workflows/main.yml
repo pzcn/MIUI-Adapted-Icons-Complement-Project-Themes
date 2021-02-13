@@ -26,8 +26,8 @@ jobs:
 
       - name: export file size
         run: |
-          cp ./.github/filesize ./config/explore
-          cp ./.github/filesize ./config/lrone
+          cp -r ./.github/filesize ./config/explore
+          cp -r ./.github/filesize ./config/lrone
           echo "explore_file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./config/explore
           echo "lrone_file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./config/lrone
 
