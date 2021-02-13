@@ -36,6 +36,4 @@ jobs:
           author_name: pzcn
           author_email: pdzzzcn@gmail.com
           message: 'Update Themes'
-          add: 
-            - '*.tar.xz'
-            - 'filesize'
+          add: "['*.tar.xz', 'filesize']"
