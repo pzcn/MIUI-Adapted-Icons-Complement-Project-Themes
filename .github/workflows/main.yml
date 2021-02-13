@@ -21,13 +21,13 @@ jobs:
 
       - name: Zip Folder
         run: |
-          zip -r themes.zip *.tar.xz
-          zip -r themes.zip *.xml
+          zip -r themes.zip explore.tar.xz
+          zip -r themes.zip lrone.tar.xz
 
       - name: export file size
         run: |
-          echo "file_size=`ls -l ./themes/explore.tar.xz | awk '{print $5}'`" >> explore.xml
-          echo "file_size=`ls -l ./themes/lrone.tar.xz | awk '{print $5}'`" >> lrone.xml
+          echo "file_size=`ls -l ./themes/explore.tar.xz | awk '{print $5}'`" >> ./explore/filesize
+          echo "file_size=`ls -l ./themes/lrone.tar.xz | awk '{print $5}'`" >> ./lrone/filesize
 
       - name: Bump version and push tag
         id: tag_version
