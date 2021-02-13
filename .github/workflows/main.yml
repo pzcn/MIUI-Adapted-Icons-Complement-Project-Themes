@@ -26,8 +26,8 @@ jobs:
 
       - name: export file size
         run: |
-          echo "file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./explore/filesize
-          echo "file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./lrone/filesize
+          echo "explore_file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./filesize
+          echo "lrone_file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./filesize
 
       - name: Bump version and push tag
         id: tag_version
