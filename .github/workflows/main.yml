@@ -26,10 +26,10 @@ jobs:
 
       - name: export file size
         run: |
-          cp ./.github/filesize ./explore.xml
-          cp ./.github/filesize ./lrone.xml
-          echo "explore_file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./explore.xml
-          echo "lrone_file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./lrone.xml
+          cp ./.github/filesize ./config/explore
+          cp ./.github/filesize ./config/lrone
+          echo "explore_file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./config/explore
+          echo "lrone_file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./config/lrone
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
@@ -37,7 +37,7 @@ jobs:
           author_name: pzcn
           author_email: pdzzzcn@gmail.com
           message: 'Update Themes'
-          add: "['*.tar.xz', '*.xml']"
+          add: "['*.tar.xz', '*.config']"
 
       - name: Bump version and push tag
         id: tag_version
