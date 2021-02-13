@@ -27,8 +27,8 @@ jobs:
       - name: export file size
         run: |
           cp -r ./.github/config .
-          echo "explore_file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./config/explore
-          echo "lrone_file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./config/lrone
+          echo "file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./config/explore
+          echo "file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./config/lrone
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
