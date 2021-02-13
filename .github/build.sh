@@ -9,6 +9,7 @@ for dir in ${DIR};do
 	if [ -d ${dir} ];then
 		cp config.xml ${dir}/config.xml
 		cd ${dir}
+		echo ${dir}
 		mkdir -p 1/quiet
         mkdir -p 0/quiet
         mv 1.png 1/quiet/quietImage.png
@@ -32,6 +33,7 @@ for dir in ${DIR};do
 	if [ -d ${dir} ];then
 		cp config.xml ${dir}/config.xml
 		cd ${dir}
+		echo ${dir}
 		mkdir -p 1/quiet
         mkdir -p 0/quiet
         mv 1.png 1/quiet/quietImage.png
