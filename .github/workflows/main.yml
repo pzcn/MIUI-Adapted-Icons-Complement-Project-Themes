@@ -26,10 +26,10 @@ jobs:
 
       - name: export file size
         run: |
-          cp ./.github/filesize ./explore
-          cp ./.github/filesize ./lrone
-          echo "explore_file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./explore
-          echo "lrone_file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./lrone
+          cp ./.github/filesize ./explore.xml
+          cp ./.github/filesize ./lrone.xml
+          echo "explore_file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./explore.xml
+          echo "lrone_file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./lrone.xml
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
@@ -43,7 +43,7 @@ jobs:
         uses: mathieudutour/github-tag-action@v5.1
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
-          
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
