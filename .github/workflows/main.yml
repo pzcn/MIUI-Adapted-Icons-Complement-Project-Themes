@@ -29,7 +29,8 @@ jobs:
           cp -r ./.github/config .
           echo "file_size=`ls -l ./explore.tar.xz | awk '{print $5}'`" >> ./config/explore
           echo "file_size=`ls -l ./lrone.tar.xz | awk '{print $5}'`" >> ./config/lrone
-
+          echo "mod_date=$(TZ=':Asia/Shanghai' date '+%Y.%m.%d')" >> ./config/explore
+          echo "mod_date=$(TZ=':Asia/Shanghai' date '+%Y.%m.%d')" >> ./config/lrone
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
